@@ -9,13 +9,14 @@ public class Jugador {
     private double premio;
 
 
+
     public Jugador(String nombre, String resultado, double premio) {
         this.nombre = nombre;
         this.resultado = resultado;
         this.premio = premio;
 
-    }
 
+    }
 
 
 

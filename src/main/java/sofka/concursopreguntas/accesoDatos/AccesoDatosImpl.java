@@ -23,7 +23,7 @@ public class AccesoDatosImpl implements IAccedoDatos{
         try {
             var salida = new PrintWriter(new FileWriter(archivo));
             salida.close();
-            System.out.println("Se ha creado el archivo");
+          //  System.out.println("Se ha creado el archivo");
         } catch (IOException ex) {
             ex.printStackTrace();
             throw new AccesoDatosEx("Excepcion al crear concurso:" + ex.getMessage());
@@ -39,7 +39,7 @@ public class AccesoDatosImpl implements IAccedoDatos{
             var salida = new PrintWriter(new FileWriter(archivo, anexar));
             salida.println(jugador.toString());
             salida.close();
-            System.out.println("Se ha escrito informacion al archivo: " + jugador);
+          //  System.out.println("Se ha escrito informacion al archivo: " + jugador);
         } catch (IOException ex) {
             ex.printStackTrace();
             throw new EscrituraDatosEx("Excepcion al escribir información:" + ex.getMessage());
@@ -77,7 +77,7 @@ public class AccesoDatosImpl implements IAccedoDatos{
             try {
                 var salida = new PrintWriter(new FileWriter(archivo));
                 salida.close();
-                System.out.println("Se ha creado el archivo");
+               // System.out.println("Se ha creado el archivo");
             } catch (IOException ex) {
                 ex.printStackTrace();
                 throw new AccesoDatosEx("Excepcion al crear el historial:" + ex.getMessage());
@@ -89,7 +89,7 @@ public class AccesoDatosImpl implements IAccedoDatos{
         var archivo = new File(nombreArchivo);
         if(archivo.exists())
             archivo.delete();
-        System.out.println("Se ha borrado el archivo");
+        //System.out.println("Se ha borrado el archivo");
     }
 
     public AccesoDatosImpl() {
