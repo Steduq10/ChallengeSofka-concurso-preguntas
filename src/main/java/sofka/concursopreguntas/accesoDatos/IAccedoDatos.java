@@ -1,4 +1,4 @@
-package sofka.concursopreguntas.business;
+package sofka.concursopreguntas.accesoDatos;
 
 import sofka.concursopreguntas.domain.Jugador;
 import sofka.concursopreguntas.exceptions.AccesoDatosEx;
@@ -12,4 +12,8 @@ public interface IAccedoDatos {
     void crearArchivo(String nombreArchivo) throws AccesoDatosEx;
     void escribirArchivo(String nombreArchivo, Jugador jugador, boolean anexar) throws EscrituraDatosEx;
     List<Jugador> listar (String nombreArchivo) throws LecturaDatosEx;
+    void crear(String nombreArchivo) throws AccesoDatosEx;
+
+    void borrar(String nombreArchivo) throws AccesoDatosEx;
+
 }

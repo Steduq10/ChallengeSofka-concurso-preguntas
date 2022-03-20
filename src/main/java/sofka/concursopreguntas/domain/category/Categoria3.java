@@ -5,21 +5,21 @@ import sofka.concursopreguntas.domain.Ronda;
 import java.util.Scanner;
 
 public class Categoria3 {
-    private String respuesta;
+    private String pregunta;
 
-    public String getRespuesta() {
-        return respuesta;
+    public String getPregunta() {
+        return pregunta;
     }
 
-    public void setRespuesta(String respuesta) {
-        this.respuesta = respuesta;
+    public void setPregunta(String pregunta) {
+        this.pregunta = pregunta;
     }
 
     public String resultado() {
         String resultado = "";
-        this.respuesta = Ronda.Ronda();
-        if (respuesta.contains("Cuando hablamos")) {
-            System.out.println(respuesta);
+        this.pregunta = Ronda.Ronda3();
+        if (pregunta.contains("Cuando hablamos")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -42,10 +42,10 @@ public class Categoria3 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
-
+            return resultado;
         }
-        else if (respuesta.contains("Que combinaciones")) {
-            System.out.println(respuesta);
+        else if (pregunta.contains("Que combinaciones")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -68,9 +68,10 @@ public class Categoria3 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
+            return resultado;
         }
-        else if (respuesta.contains("Todas")) {
-            System.out.println(respuesta);
+        else if (pregunta.contains("Todas")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -93,9 +94,10 @@ public class Categoria3 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
+            return resultado;
         }
-        else if (respuesta.contains("Una")) {
-            System.out.println(respuesta);
+        else if (pregunta.contains("Una")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -118,9 +120,10 @@ public class Categoria3 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
+            return resultado;
         }
-        else if (respuesta.contains("Qué tipos")) {
-            System.out.println(respuesta);
+        else if (pregunta.contains("Qué tipos")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -143,18 +146,12 @@ public class Categoria3 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
+            return resultado;
         }
 
         return resultado;
 
     }
-    public boolean correcto() {
-        String result = resultado();
-        if (result.contains("Respuesta correcta")){
-            return true;
-        }
-        return false;
 
-    }
 
 }

@@ -5,21 +5,21 @@ import sofka.concursopreguntas.domain.Ronda;
 import java.util.Scanner;
 
 public class Categoria4 {
-    private String respuesta;
+    private String pregunta;
 
-    public String getRespuesta() {
-        return respuesta;
+    public String getPregunta() {
+        return pregunta;
     }
 
-    public void setRespuesta(String respuesta) {
-        this.respuesta = respuesta;
+    public void setPregunta(String pregunta) {
+        this.pregunta = pregunta;
     }
 
     public String resultado() {
         String resultado = "";
-        this.respuesta = Ronda.Ronda();
-        if (respuesta.contains("Una caracteristica")) {
-            System.out.println(respuesta);
+        this.pregunta = Ronda.Ronda4();
+        if (pregunta.contains("Una caracteristica")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -42,10 +42,10 @@ public class Categoria4 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
-
+            return resultado;
         }
-        else if (respuesta.contains("Una clase")) {
-            System.out.println(respuesta);
+        else if (pregunta.contains("Una clase")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -68,9 +68,10 @@ public class Categoria4 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
+            return resultado;
         }
-        else if (respuesta.contains("En javascript")) {
-            System.out.println(respuesta);
+        else if (pregunta.contains("En javascript")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -93,9 +94,10 @@ public class Categoria4 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
+            return resultado;
         }
-        else if (respuesta.contains("La diferencia")) {
-            System.out.println(respuesta);
+        else if (pregunta.contains("La diferencia")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -118,9 +120,10 @@ public class Categoria4 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
+            return resultado;
         }
-        else if (respuesta.contains("Un comando")) {
-            System.out.println(respuesta);
+        else if (pregunta.contains("Un comando")) {
+            System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -143,17 +146,11 @@ public class Categoria4 {
                     resultado = "Vuelve a intentarlo";
                     break;
             }
+            return resultado;
         }
 
         return resultado;
 
     }
-    public boolean correcto() {
-        String result = resultado();
-        if (result.contains("Respuesta correcta")){
-            return true;
-        }
-        return false;
 
-    }
 }

@@ -1,4 +1,4 @@
-package sofka.concursopreguntas.business;
+package sofka.concursopreguntas.accesoDatos;
 
 
 import sofka.concursopreguntas.domain.Jugador;
@@ -19,7 +19,6 @@ public class AccesoDatosImpl implements IAccedoDatos{
 
     @Override
     public void crearArchivo(String nombreArchivo) throws AccesoDatosEx {
-        System.out.println("Entro al caso 1 desde acceso datos");
         var archivo = new File(nombreArchivo);
         try {
             var salida = new PrintWriter(new FileWriter(archivo));
@@ -56,7 +55,7 @@ public class AccesoDatosImpl implements IAccedoDatos{
             String linea = null;
             linea = entrada.readLine();
             while (linea != null) {
-                var jugador = new Jugador(linea, null, null, null);
+                var jugador = new Jugador(linea, null, null, 0);
                 jugadores.add(jugador);
                 linea = entrada.readLine();
             }
@@ -70,6 +69,27 @@ public class AccesoDatosImpl implements IAccedoDatos{
 
         }
         return jugadores;
+    }
+
+    @Override
+    public void crear(String nombreArchivo) throws AccesoDatosEx {
+            var archivo = new File(nombreArchivo);
+            try {
+                var salida = new PrintWriter(new FileWriter(archivo));
+                salida.close();
+                System.out.println("Se ha creado el archivo");
+            } catch (IOException ex) {
+                ex.printStackTrace();
+                throw new AccesoDatosEx("Excepcion al crear el historial:" + ex.getMessage());
+            }
+    }
+
+    @Override
+    public void borrar(String nombreArchivo) throws AccesoDatosEx {
+        var archivo = new File(nombreArchivo);
+        if(archivo.exists())
+            archivo.delete();
+        System.out.println("Se ha borrado el archivo");
     }
 
     public AccesoDatosImpl() {

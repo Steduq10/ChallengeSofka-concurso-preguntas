@@ -4,9 +4,9 @@ public class Jugador {
     private String nombre;
     private String pregunta;
     private String resultado;
-    private String premio;
+    private double premio;
 
-    public Jugador(String nombre, String pregunta, String resultado, String premio) {
+    public Jugador(String nombre, String pregunta, String resultado, double premio) {
         this.nombre = nombre;
         this.pregunta = pregunta;
         this.resultado = resultado;
@@ -29,11 +29,11 @@ public class Jugador {
         this.resultado = resultado;
     }
 
-    public String getPremio() {
+    public double getPremio() {
         return premio;
     }
 
-    public void setPremio(String premio) {
+    public void setPremio(double premio) {
         this.premio = premio;
     }
 
