@@ -15,11 +15,10 @@ public class BusinessImpl implements IBusiness {
 
     @Override
     public void agregarJugador(String nombre, Jugador jugador) {
-        //Jugador jugador = new Jugador(nombre, jugador);
         boolean anexar = false;
         try {
             anexar = datos.existe(NOMBRE_ARCHIVO);
-            datos.escribirArchivo(NOMBRE_ARCHIVO, jugador, anexar);
+            datos.escribirArchivo(nombre, jugador, anexar);
         } catch (AccesoDatosEx ex) {
             System.out.println("Error de acceso a datos");
             ex.printStackTrace(System.out);

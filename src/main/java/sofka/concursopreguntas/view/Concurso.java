@@ -1,18 +1,24 @@
 package sofka.concursopreguntas.view;
 
+import com.vladsch.flexmark.util.sequence.builder.IBasedSegmentBuilder;
 import org.codehaus.groovy.transform.SourceURIASTTransformation;
 import sofka.concursopreguntas.accesoDatos.AccesoDatosImpl;
 import sofka.concursopreguntas.business.BusinessImpl;
+import sofka.concursopreguntas.business.IBusiness;
+import sofka.concursopreguntas.domain.Jugador;
 import sofka.concursopreguntas.domain.Premio;
+import sofka.concursopreguntas.domain.Ronda;
 import sofka.concursopreguntas.domain.category.*;
 import sofka.concursopreguntas.exceptions.AccesoDatosEx;
 
+import java.time.LocalDateTime;
 import java.util.Scanner;
 
 public class Concurso {
 
     public static void main(String[] args) throws AccesoDatosEx {
         System.out.println("BIENVENIDOS AL CONCURSO DE PREGUNTAS");
+        String NOMBRE_ARCHIVO = "historial.txt";
         var opcion = -1;
         double premio1;
         double premio2;
@@ -21,7 +27,8 @@ public class Concurso {
         double premio5;
         double acumulado;
 
-        BusinessImpl datos = new BusinessImpl();
+
+        IBusiness datos = new BusinessImpl();
 
 
 
@@ -54,6 +61,9 @@ public class Concurso {
                     if (res.contains("correcta")) {
                         premio1 = Premio.PREMIO1.getPremio();
                         System.out.println("Felicidades. Ganaste: " + premio1 + "USD");
+                        acumulado = premio1;
+                        Jugador jugador = new Jugador(nombre,res,acumulado);
+                        datos.agregarJugador(NOMBRE_ARCHIVO,jugador);
                         Categoria2 categoria2 = new Categoria2();
 
                         var res2 = categoria2.resultado();
@@ -63,6 +73,8 @@ public class Concurso {
                             System.out.println("Felicidades. Ganaste: " + premio2 + "USD");
                             acumulado = premio1 + premio2;
                             System.out.println("Su premio acumulado es de: " + acumulado + "USD");
+                            Jugador jugador2 = new Jugador(nombre,res,acumulado);
+                            datos.agregarJugador(NOMBRE_ARCHIVO,jugador2);
                             Categoria3 categoria3 = new Categoria3();
                             var res3 = categoria3.resultado();
                             if (res3.contains("correcta")) {
@@ -70,6 +82,8 @@ public class Concurso {
                                 System.out.println("Felicidades. Ganaste: " + premio3 + "USD");
                                 acumulado = premio1 + premio2 + premio3;
                                 System.out.println("Su premio acumulado es de: " + acumulado + "USD");
+                                Jugador jugador3 = new Jugador(nombre,res,acumulado);
+                                datos.agregarJugador(NOMBRE_ARCHIVO,jugador3);
                                 Categoria4 categoria4 = new Categoria4();
                                 var res4 = categoria4.resultado();
                                 if (res4.contains("correcta")) {
@@ -77,6 +91,8 @@ public class Concurso {
                                     System.out.println("Felicidades. Ganaste: " + premio4 + "USD");
                                     acumulado = premio1 + premio2 + premio3 + premio4;
                                     System.out.println("Su premio acumulado es de: " + acumulado + "USD");
+                                    Jugador jugador4 = new Jugador(nombre,res,acumulado);
+                                    datos.agregarJugador(NOMBRE_ARCHIVO,jugador4);
                                     Categoria5 categoria5 = new Categoria5();
                                     var res5 = categoria5.resultado();
                                     if (res5.contains("correcta")) {
@@ -84,6 +100,8 @@ public class Concurso {
                                         System.out.println("Felicidades. Ganaste: " + premio5 + "USD");
                                         acumulado = premio1 + premio2 + premio3 + premio4 + premio5;
                                         System.out.println("Su premio acumulado es de: " + acumulado + "USD");
+                                        Jugador jugador5 = new Jugador(nombre,res,acumulado);
+                                        datos.agregarJugador(NOMBRE_ARCHIVO,jugador5);
                                     }
                                     }
                             }
@@ -91,6 +109,10 @@ public class Concurso {
 
                         }
                     }
+
+                    //Jugador jugador = new Jugador(nombre,);
+
+
                     break;
                 case 2:
                     System.out.println("Nos vemos pronto");

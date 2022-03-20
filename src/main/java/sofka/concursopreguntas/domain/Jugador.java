@@ -1,25 +1,23 @@
 package sofka.concursopreguntas.domain;
 
+
+
 public class Jugador {
     private String nombre;
     private String pregunta;
     private String resultado;
     private double premio;
 
-    public Jugador(String nombre, String pregunta, String resultado, double premio) {
+
+    public Jugador(String nombre, String resultado, double premio) {
         this.nombre = nombre;
-        this.pregunta = pregunta;
         this.resultado = resultado;
         this.premio = premio;
+
     }
 
-    public String getPregunta() {
-        return pregunta;
-    }
 
-    public void setPregunta(String pregunta) {
-        this.pregunta = pregunta;
-    }
+
 
     public String getResultado() {
         return resultado;
@@ -47,5 +45,11 @@ public class Jugador {
         this.nombre = nombre;
     }
 
-
+    @Override
+    public String toString() {
+        return
+                "Nombre del jugador= '" + nombre + '\'' +
+                ", resultado= '" + resultado + '\'' +
+                ", premio= " + premio;
+    }
 }

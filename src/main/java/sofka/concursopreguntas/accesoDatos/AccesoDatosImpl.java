@@ -55,7 +55,7 @@ public class AccesoDatosImpl implements IAccedoDatos{
             String linea = null;
             linea = entrada.readLine();
             while (linea != null) {
-                var jugador = new Jugador(linea, null, null, 0);
+                var jugador = new Jugador(linea, null, 0);
                 jugadores.add(jugador);
                 linea = entrada.readLine();
             }

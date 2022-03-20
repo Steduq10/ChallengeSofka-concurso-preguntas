@@ -2,6 +2,8 @@ package sofka.concursopreguntas.domain.category;
 
 import sofka.concursopreguntas.domain.Ronda;
 
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Scanner;
 
 public class Categoria1 {
@@ -21,7 +23,6 @@ public class Categoria1 {
     public String resultado() {
         String resultado = "";
         this.pregunta = Ronda.Ronda1();
-
         if (pregunta.contains("MySQL")) {
             System.out.println(pregunta);
             System.out.println("¿Su respuesta es?: ");
@@ -47,7 +48,7 @@ public class Categoria1 {
                     break;
             }
 
-            return resultado;
+            return  resultado;
 
         }
         else if (pregunta.contains("Una abstracción es")) {
@@ -156,15 +157,8 @@ public class Categoria1 {
             return  resultado;
         }
 
-        return resultado;
+        return  resultado;
     }
 
-   /* public boolean correcto() {
-        String result = resultado();
-        if (result.contains("correcta")){
-            return true;
-        }
-        return false;
 
-    }*/
 }
