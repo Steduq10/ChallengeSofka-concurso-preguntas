@@ -38,6 +38,10 @@ public class Categoria3 {
                 case "D":
                     resultado = "Respuesta incorrecta";
                     break;
+                case "F":
+                    resultado = "Gracias por participar";
+                    break;
+
 
                 default:
                     resultado = "Vuelve a intentarlo";

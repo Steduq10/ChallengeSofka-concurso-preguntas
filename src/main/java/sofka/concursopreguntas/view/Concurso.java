@@ -41,8 +41,7 @@ public class Concurso {
         while (opcion != 0) {
             System.out.println("MENÚ\n" +
                     "1. Iniciar juego\n" +
-                    "2. Salir del juego\n" +
-                    "3. Historial");
+                    "2. Salir del juego");
 
             Scanner input = new Scanner(System.in);
             opcion = Integer.parseInt(input.nextLine());
@@ -150,6 +149,7 @@ public class Concurso {
                                     }else if (res5.contains("Gracias por participar")) {
                                         System.out.println("Gracias por participar");
                                         datos.agregarJugador(NOMBRE_ARCHIVO, jugador4);
+                                        System.out.println("Tu premio fue de: " + acumulado + " USD");
                                         opcion = 0;
 
                                     }
@@ -164,6 +164,7 @@ public class Concurso {
                                 } else if (res4.contains("Gracias por participar")) {
                                     System.out.println("Gracias por participar");
                                     datos.agregarJugador(NOMBRE_ARCHIVO, jugador3);
+                                    System.out.println("Tu premio fue de: " + acumulado + " USD");
                                     opcion = 0;
 
                                 }
@@ -178,6 +179,7 @@ public class Concurso {
                             }else if (res3.contains("Gracias por participar")) {
                                 System.out.println("Gracias por participar");
                                 datos.agregarJugador(NOMBRE_ARCHIVO, jugador2);
+                                System.out.println("Tu premio fue de: " + acumulado + " USD");
                                 opcion = 0;
 
                             }
@@ -194,7 +196,9 @@ public class Concurso {
                         } else if (res2.contains("Gracias por participar")) {
                             System.out.println("Gracias por participar");
                             datos.agregarJugador(NOMBRE_ARCHIVO, jugador);
+                            System.out.println("Tu premio fue de: " + acumulado + " USD");
                             opcion = 0;
+
 
                         }
                         else {
@@ -209,6 +213,7 @@ public class Concurso {
                     } else if (res.contains("Gracias por participar")) {
                         System.out.println("Gracias por participar");
                         datos.agregarJugador(NOMBRE_ARCHIVO, jugador0);
+                        System.out.println("Tu premio fue de: " + acumulado + " USD");
                         opcion = 0;
 
                     }
