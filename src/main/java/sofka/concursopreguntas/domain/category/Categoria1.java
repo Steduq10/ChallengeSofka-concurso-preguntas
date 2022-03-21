@@ -25,6 +25,7 @@ public class Categoria1 {
         this.pregunta = Ronda.Ronda1();
         if (pregunta.contains("MySQL")) {
             System.out.println(pregunta);
+           // System.out.println("Si quieres rendirte escribe la letra F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -42,13 +43,15 @@ public class Categoria1 {
                 case "D":
                     resultado = "Respuesta incorrecta";
                     break;
+                //case "F":
+                   // resultado = ""
 
                 default:
                     resultado = "Vuelve a intentarlo";
                     break;
             }
 
-            return  resultado;
+            return  resultado ;
 
         }
         else if (pregunta.contains("Una abstracción es")) {

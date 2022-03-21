@@ -1,5 +1,4 @@
-Nombre del jugador= 'Steven', resultado= 'Respuesta correcta', premio= 1000.0
-Nombre del jugador= 'Steven', resultado= 'Respuesta correcta', premio= 3000.0
-Nombre del jugador= 'Steven', resultado= 'Respuesta correcta', premio= 6000.0
-Nombre del jugador= 'Steven', resultado= 'Respuesta correcta', premio= 10000.0
-Nombre del jugador= 'Steven', resultado= 'Respuesta correcta', premio= 15000.0
+Nombre del jugador= 'AS', resultado= 'Respuesta correcta', acumulado= 0.0
+Nombre del jugador= 'AS', resultado= 'Respuesta correcta', acumulado= 1000.0
+Nombre del jugador= 'AS', resultado= 'Respuesta correcta', acumulado= 3000.0
+Nombre del jugador= 'AS', resultado= 'Respuesta correcta', acumulado= 0.0

@@ -6,17 +6,26 @@ public class Jugador {
     private String nombre;
     private String pregunta;
     private String resultado;
-    private double premio;
+    private double acumulado;
 
 
 
-    public Jugador(String nombre, String resultado, double premio) {
+    public Jugador(String nombre, String resultado, double acumulado) {
         this.nombre = nombre;
         this.resultado = resultado;
-        this.premio = premio;
+        this.acumulado = acumulado;
 
 
     }
+
+    public Jugador(String nombre, String resultado) {
+        this.nombre = nombre;
+        this.resultado = resultado;
+        this.acumulado = 0;
+
+
+    }
+
 
 
 
@@ -28,12 +37,12 @@ public class Jugador {
         this.resultado = resultado;
     }
 
-    public double getPremio() {
-        return premio;
+    public double getAcumulado() {
+        return acumulado;
     }
 
-    public void setPremio(double premio) {
-        this.premio = premio;
+    public void setAcumulado(double acumulado) {
+        this.acumulado = acumulado;
     }
 
 
@@ -51,6 +60,6 @@ public class Jugador {
         return
                 "Nombre del jugador= '" + nombre + '\'' +
                 ", resultado= '" + resultado + '\'' +
-                ", premio= " + premio;
+                ", acumulado= " + acumulado;
     }
 }

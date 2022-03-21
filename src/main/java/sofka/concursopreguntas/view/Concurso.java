@@ -1,13 +1,11 @@
 package sofka.concursopreguntas.view;
 
-import com.vladsch.flexmark.util.sequence.builder.IBasedSegmentBuilder;
-import org.codehaus.groovy.transform.SourceURIASTTransformation;
-import sofka.concursopreguntas.accesoDatos.AccesoDatosImpl;
+
 import sofka.concursopreguntas.business.BusinessImpl;
 import sofka.concursopreguntas.business.IBusiness;
 import sofka.concursopreguntas.domain.Jugador;
 import sofka.concursopreguntas.domain.Premio;
-import sofka.concursopreguntas.domain.Ronda;
+
 import sofka.concursopreguntas.domain.category.*;
 import sofka.concursopreguntas.exceptions.AccesoDatosEx;
 
@@ -66,69 +64,75 @@ public class Concurso {
                     System.out.println("**********************************************");
                     System.out.println("Primera pregunta, por un premio de 1000 USD");
                     System.out.println("**********************************************");
-
+                    acumulado =0;
                     Categoria1 categoria1 = new Categoria1();
-                    var res =categoria1.resultado();
+                    //var res0 = categoria1.resultado();
+                    var res = categoria1.resultado();
+                    Jugador jugador0 = new Jugador(nombre, res, acumulado);
+                    datos.agregarJugador(NOMBRE_ARCHIVO, jugador0);
                     System.out.println(res);
                     System.out.println("-----------------------------------------------");
                     System.out.println(" ");
-                    if (res.contains("correcta")) {
+                    if (res.contains("Respuesta correcta")) {
                         premio1 = Premio.PREMIO1.getPremio();
                         System.out.println("Felicidades. Ganaste: " + premio1 + " USD");
                         System.out.println(" ");
                         System.out.println("**********************************************");
                         acumulado = premio1;
-                        Jugador jugador = new Jugador(nombre,res,acumulado);
-                        datos.agregarJugador(NOMBRE_ARCHIVO,jugador);
+                        Jugador jugador = new Jugador(nombre, res, acumulado);
+                        datos.agregarJugador(NOMBRE_ARCHIVO, jugador);
                         Categoria2 categoria2 = new Categoria2();
-                        System.out.println("Segunda pregunta, por un premio de 2000 USD");;
+                        System.out.println("Segunda pregunta, por un premio de 2000 USD");
+                        ;
                         System.out.println("**********************************************");
-
                         var res2 = categoria2.resultado();
                         System.out.println(res2);
                         System.out.println("-----------------------------------------------");
                         System.out.println(" ");
-                        if (res2.contains("correcta")) {
+                        if (res2.contains("Respuesta correcta")) {
                             premio2 = Premio.PREMIO2.getPremio();
                             System.out.println("Felicidades. Ganaste: " + premio2 + " USD");
                             acumulado = premio1 + premio2;
                             System.out.println("Su premio acumulado es de: " + acumulado + " USD");
                             System.out.println(" ");
                             System.out.println("**********************************************");
-                            Jugador jugador2 = new Jugador(nombre,res,acumulado);
-                            datos.agregarJugador(NOMBRE_ARCHIVO,jugador2);
+                            Jugador jugador2 = new Jugador(nombre, res, acumulado);
+                            datos.agregarJugador(NOMBRE_ARCHIVO, jugador2);
                             Categoria3 categoria3 = new Categoria3();
-                            System.out.println("Tercera pregunta, por un premio de 3000 usd");;
+                            System.out.println("Tercera pregunta, por un premio de 3000 usd");
+                            ;
                             System.out.println("**********************************************");
                             var res3 = categoria3.resultado();
                             System.out.println("-----------------------------------------------");
                             System.out.println(" ");
-                            if (res3.contains("correcta")) {
+                            if (res3.contains("Respuesta correcta")) {
                                 premio3 = Premio.PREMIO3.getPremio();
                                 System.out.println("Felicidades. Ganaste: " + premio3 + " USD");
                                 acumulado = premio1 + premio2 + premio3;
                                 System.out.println("Su premio acumulado es de: " + acumulado + " USD");
                                 System.out.println(" ");
                                 System.out.println("**********************************************");
-                                Jugador jugador3 = new Jugador(nombre,res,acumulado);
-                                datos.agregarJugador(NOMBRE_ARCHIVO,jugador3);
+                                Jugador jugador3 = new Jugador(nombre, res, acumulado);
+                                datos.agregarJugador(NOMBRE_ARCHIVO, jugador3);
                                 Categoria4 categoria4 = new Categoria4();
-                                System.out.println("Cuarta pregunta, por un premio de 4000 usd");;
+                                System.out.println("Cuarta pregunta, por un premio de 4000 usd");
+                                ;
                                 System.out.println("**********************************************");
                                 var res4 = categoria4.resultado();
                                 System.out.println("-----------------------------------------------");
                                 System.out.println(" ");
-                                if (res4.contains("correcta")) {
+                                if (res4.contains("Respuesta correcta")) {
                                     premio4 = Premio.PREMIO4.getPremio();
                                     System.out.println("Felicidades. Ganaste: " + premio4 + " USD");
                                     acumulado = premio1 + premio2 + premio3 + premio4;
                                     System.out.println("Su premio acumulado es de: " + acumulado + " USD");
                                     System.out.println(" ");
                                     System.out.println("**********************************************");
-                                    Jugador jugador4 = new Jugador(nombre,res, acumulado);
-                                    datos.agregarJugador(NOMBRE_ARCHIVO,jugador4);
+                                    Jugador jugador4 = new Jugador(nombre, res, acumulado);
+                                    datos.agregarJugador(NOMBRE_ARCHIVO, jugador4);
                                     Categoria5 categoria5 = new Categoria5();
-                                    System.out.println("Quinta pregunta, por un premio de 5000 usd");;
+                                    System.out.println("Quinta pregunta, por un premio de 5000 usd");
+                                    ;
                                     System.out.println("**********************************************");
                                     var res5 = categoria5.resultado();
                                     System.out.println("-----------------------------------------------");
@@ -140,18 +144,55 @@ public class Concurso {
                                         System.out.println("GANASTE EL PREMIO MAYOR, Y TE LLEVAS UN ACUMULADO DE: " + acumulado + " USD");
                                         System.out.println(" ");
                                         System.out.println("**********************************************");
-                                        Jugador jugador5 = new Jugador(nombre,res,acumulado);
-                                        datos.agregarJugador(NOMBRE_ARCHIVO,jugador5);
+                                        Jugador jugador5 = new Jugador(nombre, res, acumulado);
+                                        datos.agregarJugador(NOMBRE_ARCHIVO, jugador5);
 
+                                    }else {
+                                        System.out.println("Lo sentimos, PERDISTE");
+                                        acumulado =0;
+                                        System.out.println("Tu premio es de: " + acumulado + " USD");
+                                        jugador0.setAcumulado(0);
+                                        datos.agregarJugador(NOMBRE_ARCHIVO,jugador0);
+                                        opcion =0;
                                     }
-                                    }
+                                }else {
+                                    System.out.println("Lo sentimos, PERDISTE");
+                                    acumulado =0;
+                                    System.out.println("Tu premio es de: " + acumulado + " USD");
+                                    jugador0.setAcumulado(0);
+                                    datos.agregarJugador(NOMBRE_ARCHIVO,jugador0);
+                                    opcion =0;
+                                }
+                            }else {
+                                System.out.println("Lo sentimos, PERDISTE");
+                                acumulado =0;
+                                System.out.println("Tu premio es de: " + acumulado + " USD");
+                                jugador0.setAcumulado(0);
+                                datos.agregarJugador(NOMBRE_ARCHIVO,jugador0);
+                                opcion =0;
                             }
 
 
+                    }else {
+                            System.out.println("Lo sentimos, PERDISTE");
+                            acumulado =0;
+                            System.out.println("Tu premio es de: " + acumulado + " USD");
+                            jugador0.setAcumulado(0);
+                            datos.agregarJugador(NOMBRE_ARCHIVO,jugador0);
+                            opcion =0;
                         }
+
+                    }else {
+                        System.out.println("Lo sentimos, PERDISTE");
+                        acumulado =0;
+                        System.out.println("Tu premio es de: " + acumulado + " USD");
+                        jugador0.setAcumulado(0);
+                        datos.agregarJugador(NOMBRE_ARCHIVO,jugador0);
+
+                        opcion =0;
                     }
 
-                    //Jugador jugador = new Jugador(nombre,);
+
 
 
                     break;
