@@ -20,6 +20,7 @@ public class Categoria3 {
         this.pregunta = Ronda.Ronda3();
         if (pregunta.contains("Cuando hablamos")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -46,6 +47,7 @@ public class Categoria3 {
         }
         else if (pregunta.contains("Que combinaciones")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -62,6 +64,9 @@ public class Categoria3 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -72,6 +77,7 @@ public class Categoria3 {
         }
         else if (pregunta.contains("Todas")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -88,6 +94,9 @@ public class Categoria3 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -98,6 +107,7 @@ public class Categoria3 {
         }
         else if (pregunta.contains("Una")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -114,6 +124,9 @@ public class Categoria3 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -124,6 +137,7 @@ public class Categoria3 {
         }
         else if (pregunta.contains("Qué tipos")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -140,6 +154,9 @@ public class Categoria3 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:

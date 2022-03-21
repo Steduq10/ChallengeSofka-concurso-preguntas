@@ -10,7 +10,9 @@ public class Pregunta {
                     + "A: Relacional\n"
                     + "B: No-Relacional\n"
                     + "C: Ninguna de las anteriores\n"
-                    + "D: A y B",
+                    + "D: A y B\n",
+
+
             "Una abstracción es...\n"
                     + "A: Es una herencia de una clase maestra\n"
                     + "B: Es una herencia de multiples comportamientos\n"

@@ -20,6 +20,7 @@ public class Categoria2 {
         this.pregunta = Ronda.Ronda2();
         if (pregunta.contains("Cuando hablamos de java")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -36,6 +37,9 @@ public class Categoria2 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -46,6 +50,7 @@ public class Categoria2 {
         }
         else if (pregunta.contains("Con java")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -62,6 +67,9 @@ public class Categoria2 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -72,6 +80,7 @@ public class Categoria2 {
         }
         else if (pregunta.contains("nodejs")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -88,6 +97,9 @@ public class Categoria2 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -98,6 +110,7 @@ public class Categoria2 {
         }
         else if (pregunta.contains("Cuando hablamos de un backend")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -114,6 +127,9 @@ public class Categoria2 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -124,6 +140,7 @@ public class Categoria2 {
         }
         else if (pregunta.contains("Un modelo")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -140,6 +157,9 @@ public class Categoria2 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:

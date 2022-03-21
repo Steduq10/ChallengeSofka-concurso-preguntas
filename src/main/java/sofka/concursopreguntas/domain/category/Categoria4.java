@@ -20,6 +20,7 @@ public class Categoria4 {
         this.pregunta = Ronda.Ronda4();
         if (pregunta.contains("Una caracteristica")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -36,6 +37,9 @@ public class Categoria4 {
                     break;
                 case "D":
                     resultado = "Respuesta correcta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -46,6 +50,7 @@ public class Categoria4 {
         }
         else if (pregunta.contains("Una clase")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -66,12 +71,16 @@ public class Categoria4 {
 
                 default:
                     resultado = "Vuelve a intentarlo";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
             }
             return resultado;
         }
         else if (pregunta.contains("En javascript")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -93,11 +102,15 @@ public class Categoria4 {
                 default:
                     resultado = "Vuelve a intentarlo";
                     break;
+                case "F":
+                    resultado = "Gracias por participar";
+                    break;
             }
             return resultado;
         }
         else if (pregunta.contains("La diferencia")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -114,6 +127,9 @@ public class Categoria4 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:
@@ -124,6 +140,7 @@ public class Categoria4 {
         }
         else if (pregunta.contains("Un comando")) {
             System.out.println(pregunta);
+            System.out.println("Si quieres retirarte marca F");
             System.out.println("¿Su respuesta es?: ");
             Scanner consola = new Scanner(System.in);
             var respuesta = consola.nextLine();
@@ -140,6 +157,9 @@ public class Categoria4 {
                     break;
                 case "D":
                     resultado = "Respuesta incorrecta";
+                    break;
+                case "F":
+                    resultado = "Gracias por participar";
                     break;
 
                 default:

@@ -1,4 +1,3 @@
-Nombre del jugador= 'AS', resultado= 'Respuesta correcta', acumulado= 0.0
-Nombre del jugador= 'AS', resultado= 'Respuesta correcta', acumulado= 1000.0
-Nombre del jugador= 'AS', resultado= 'Respuesta correcta', acumulado= 3000.0
-Nombre del jugador= 'AS', resultado= 'Respuesta correcta', acumulado= 0.0
+Nombre del jugador= 'steven', resultado= 'Respuesta correcta', acumulado= 0.0
+Nombre del jugador= 'steven', resultado= 'Respuesta correcta', acumulado= 1000.0
+Nombre del jugador= 'steven', resultado= 'Respuesta correcta', acumulado= 1000.0
